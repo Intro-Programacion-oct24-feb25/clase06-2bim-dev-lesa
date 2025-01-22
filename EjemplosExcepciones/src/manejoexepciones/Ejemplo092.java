@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Ejemplo092 {
-    
+
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
         boolean bandera = true;
@@ -22,20 +22,20 @@ public class Ejemplo092 {
                 System.out.println("Ingrese un pais");
                 String pais = entrada.nextLine();
                 pais = pais.toLowerCase();
-                if (pais.startsWith("a")||
-                        pais.startsWith("e")||
-                        pais.startsWith("i")||
-                        pais.startsWith("o")||
-                        pais.startsWith("u")) {
-                    throw new Exception("empieza con vocal");
+                if (pais.startsWith("a")
+                        || pais.startsWith("e")
+                        || pais.startsWith("i")
+                        || pais.startsWith("o")
+                        || pais.startsWith("u")) {
+                    throw new Exception("Empieza con vocal");
                 }
+                System.out.printf("el pais que ingreso es: %s", pais);
                 bandera = false;
 
             } catch (Exception e) {
                 System.out.printf("Ocurrió una excepción %s\n", e);
-                
+
             }
-            
         }
     }
 }
